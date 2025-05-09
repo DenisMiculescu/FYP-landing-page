@@ -1,11 +1,13 @@
+/* Base styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eaf4fc;
+    background: linear-gradient(180deg, #eaf4fc, #d3eafd);
     color: #212529;
   }
   
+  /* Hero */
   .hero {
     background: linear-gradient(to right, #4A90E2, #50E3C2);
     color: white;
@@ -18,15 +20,25 @@ body {
     font-weight: bold;
   }
   
+  .hero p {
+    font-size: 1.25rem;
+  }
+  
+  /* Section layout */
   .section {
     padding: 60px 20px;
-    background-color: #eaf4fc;
   }
   
-  .section-light {
-    background-color: #eaf4fc;
+  .section-content {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    max-width: 1000px;
+    margin: auto;
   }
   
+  /* Buttons */
   .btn-custom {
     background-color: #4A90E2;
     color: white;
@@ -41,6 +53,7 @@ body {
     background-color: #357ABD;
   }
   
+  /* Footer */
   .footer {
     background: #343a40;
     color: white;
