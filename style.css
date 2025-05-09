@@ -23,6 +23,10 @@ body {
     padding: 60px 20px;
   }
   
+  .section-light {
+    background-color: #e9f4fb;
+  }
+  
   .btn-custom {
     background-color: #4A90E2;
     color: white;
@@ -44,6 +48,14 @@ body {
     padding: 20px 0;
   }
   
+  /* Poster image sizing */
+  .poster-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
   /* Dark mode styles */
   .dark-mode {
     background-color: #121212;
@@ -57,6 +69,9 @@ body {
   }
   .dark-mode .footer {
     background: #1c1c1c;
+  }
+  .dark-mode .section-light {
+    background-color: #1e1e2f;
   }
   
   /* Fade-in animation */
