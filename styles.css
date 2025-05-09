@@ -14,6 +14,16 @@ body {
     padding: 80px 20px;
     min-height: 70vh;
   }
+
+  .hero-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid white;
+  }
+  
   
   .hero h1 {
     font-size: 3rem;
@@ -51,6 +61,10 @@ body {
   
   .btn-custom:hover {
     background-color: #357ABD;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
   
   /* Footer */
