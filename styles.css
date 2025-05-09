@@ -118,35 +118,6 @@ html {
   transform: scale(1.05);
 }
 
-/* Lightbox styles */
-.lightbox-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.9);
-  align-items: center;
-  justify-content: center;
-}
-
-.lightbox-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-}
-
 /* Reveal on scroll */
 .reveal {
   opacity: 0;
