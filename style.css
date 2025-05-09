@@ -2,9 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #eaf4fc;
     color: #212529;
-    transition: background-color 0.3s, color 0.3s;
   }
   
   .hero {
@@ -24,7 +23,7 @@ body {
   }
   
   .section-light {
-    background-color: #e9f4fb;
+    background-color: #ffffff;
   }
   
   .btn-custom {
@@ -48,69 +47,15 @@ body {
     padding: 20px 0;
   }
   
-  /* Poster styles */
-  .poster-container {
-    max-width: 600px;
-    margin: auto;
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
-  .poster-thumbnail {
-    width: 100%;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .poster-thumbnail:hover {
-    transform: scale(1.02);
-  }
-  
-  .poster-lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1050;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .poster-lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-  }
-  
-  .close-lightbox {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Dark mode */
-  .dark-mode {
-    background-color: #121212;
-    color: #f1f1f1;
-  }
-  .dark-mode .hero {
-    background: linear-gradient(to right, #1d3557, #457b9d);
-  }
-  .dark-mode .btn-custom {
-    background-color: #1f6f8b;
-  }
-  .dark-mode .footer {
-    background: #1c1c1c;
-  }
-  .dark-mode .section-light {
-    background-color: #1e1e2f;
-  }
-  
-  /* Fade-i*
   

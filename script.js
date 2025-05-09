@@ -26,34 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.1 });
   
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-  
-    // Dark mode toggle
-    document.getElementById("theme-toggle").addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-      const icon = this.querySelector("i");
-      icon.classList.toggle("fa-sun");
-      icon.classList.toggle("fa-moon");
-    });
-  
-    // Poster lightbox
-    const posterThumbnail = document.getElementById("posterThumbnail");
-    const posterLightbox = document.getElementById("posterLightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const closeLightbox = document.getElementById("closeLightbox");
-  
-    posterThumbnail.addEventListener("click", () => {
-      lightboxImage.src = posterThumbnail.src;
-      posterLightbox.style.display = "flex";
-    });
-  
-    closeLightbox.addEventListener("click", () => {
-      posterLightbox.style.display = "none";
-    });
-  
-    window.addEventListener("click", (e) => {
-      if (e.target === posterLightbox) {
-        posterLightbox.style.display = "none";
-      }
-    });
   });
   
