@@ -20,10 +20,11 @@ body {
   
   .section {
     padding: 60px 20px;
+    background-color: #eaf4fc;
   }
   
   .section-light {
-    background-color: #ffffff;
+    background-color: #eaf4fc;
   }
   
   .btn-custom {
@@ -45,17 +46,5 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
-  }
-  
-  /* Fade-in animation */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
   }
   
