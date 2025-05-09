@@ -16,3 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
     typeWriter();
   });
   
+// Screenshot lightbox
+const lightboxModal = document.getElementById("lightboxModal");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+document.querySelectorAll(".screenshot-thumbnail").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightboxModal.style.display = "flex";
+  });
+});
+
+lightboxClose.addEventListener("click", () => {
+  lightboxModal.style.display = "none";
+});
+
+window.addEventListener("click", e => {
+  if (e.target === lightboxModal) {
+    lightboxModal.style.display = "none";
+  }
+});

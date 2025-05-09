@@ -11,29 +11,30 @@ body {
   .hero {
     background: linear-gradient(to right, #4A90E2, #50E3C2);
     color: white;
-    padding: 80px 20px;
-    min-height: 70vh;
+    padding: 40px 20px 60px;
+    text-align: center;
   }
-
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  
   .hero-img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 4px solid white;
   }
-  
-  
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .hero p {
-    font-size: 1.25rem;
-  }
-  
+    
   /* Section layout */
   .section {
     padding: 60px 20px;
@@ -75,3 +76,51 @@ body {
     padding: 20px 0;
   }
   
+  /* Screenshot styling */
+.screenshot-card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.screenshot-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
