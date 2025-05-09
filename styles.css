@@ -1,102 +1,104 @@
 /* Base styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(180deg, #b1d8f8, #6fb9f5);
-    color: #212529;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #b1d8f8, #6fb9f5);
+  color: #212529;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
-    
-  /* Hero */
-  .hero {
-    background: linear-gradient(to right, #4A90E2, #50E3C2);
-    color: white;
-    padding: 20px 10px 30px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 15px;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 0;
-  }
-  
-  .hero-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 4px solid white;
-  }
-    
-  /* Section layout */
-  .section {
-    padding: 60px 20px;
-  }
-  
-  .section-content {
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    padding: 40px 30px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  /* Buttons */
-  .btn-custom {
-    background-color: #4A90E2;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-custom:hover {
-    background-color: #357ABD;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  #scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 12px 16px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: none;
-    transition: opacity 0.3s;
-  }
-  #scrollTopBtn:hover {
-    background-color: #357ABD;
-  }
-  
-  /* Footer */
-  .footer {
-    background: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  /* Screenshot styling */
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #4A90E2, #50E3C2);
+  color: white;
+  padding: 20px 10px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.hero-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+}
+
+/* Section layout */
+.section {
+  padding: 60px 20px;
+}
+
+.section-content {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Buttons */
+.btn-custom {
+  background-color: #4A90E2;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #357ABD;
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  transition: opacity 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #357ABD;
+}
+
+/* Footer */
+.footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Screenshot styling */
 .screenshot-card {
   overflow: hidden;
   border-radius: 12px;
@@ -116,6 +118,36 @@ body {
   transform: scale(1.05);
 }
 
+/* Lightbox styles */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Reveal on scroll */
 .reveal {
   opacity: 0;
   transform: translateY(40px);

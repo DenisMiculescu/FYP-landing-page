@@ -14,56 +14,54 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     typeWriter();
+  
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+  
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial call on load
   });
   
-// Screenshot lightbox
-const lightboxModal = document.getElementById("lightboxModal");
-const lightboxImg = document.getElementById("lightboxImg");
-const lightboxClose = document.getElementById("lightboxClose");
-
-document.querySelectorAll(".screenshot-thumbnail").forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src;
-    lightboxModal.style.display = "flex";
+  // Screenshot lightbox
+  const lightboxModal = document.getElementById("lightboxModal");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+  
+  document.querySelectorAll(".screenshot-thumbnail").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightboxModal.style.display = "flex";
+    });
   });
-});
-
-lightboxClose.addEventListener("click", () => {
-  lightboxModal.style.display = "none";
-});
-
-window.addEventListener("click", e => {
-  if (e.target === lightboxModal) {
+  
+  lightboxClose.addEventListener("click", () => {
     lightboxModal.style.display = "none";
-  }
-});
-
-// Scroll to top functionality
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.onscroll = function () {
-  scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
-};
-
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-
-// Reveal sections on scroll
-const reveals = document.querySelectorAll('.reveal');
-
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add('active');
+  });
+  
+  window.addEventListener("click", e => {
+    if (e.target === lightboxModal) {
+      lightboxModal.style.display = "none";
     }
   });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll(); // Trigger on load for visible elements
+  
+  // Scroll to top
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  
+  window.onscroll = function () {
+    scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+  };
+  
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  
